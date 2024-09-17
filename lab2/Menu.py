@@ -1,8 +1,9 @@
+
+
 def main_menu():
     print("Welcome to TUM's student management system: ")
     print("1. General Menu")
     print("2. Faculty Menu")
-    print("3. Student Menu")
     print("0. Exit")
 
 

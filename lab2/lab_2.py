@@ -1,6 +1,6 @@
 from enum import Enum
 from Menu import main_menu, faculty_menu, student_menu, general_menu
-from functions import search_student_by_email, search_faculties_by_field
+from functions import search_student_by_email, search_faculties_by_field, student_input
 
 
 class Study_field(Enum):
@@ -55,11 +55,11 @@ class Faculty:
         self.students_list[student].graduate = True
 
     def display_students(self):
-        for student in self.students_list:
-            if not self.students_list[student].graduate:
+        for student_index in self.students_list:
+            if not self.students_list[student_index].graduate:
                 print(
-                    f"First Name: {student.first_name}, Last Name: {student.last_name}, Email: {student.email}, Date of "
-                    f"birth: {student.date_of_birth}, Enrolment Date: {student.enrolment_date}")
+                    f"First Name: {student_index.first_name}, Last Name: {student_index.last_name}, Email: {student_index.email}, Date of "
+                    f"birth: {student_index.date_of_birth}, Enrolment Date: {student_index.enrolment_date}")
 
     def display_graduates(self):
         for student in self.students_list:
@@ -107,23 +107,34 @@ def main():
                 faculty_menu()
                 choice_fm = input("Enter choice:")
                 if choice_fm == "1":
-                    new_first_name = input("Enter student's first name:")
-                    new_last_name = input("Enter student's last name:")
-                    new_email = input("Enter student's email address:")
-                    new_enrollment_date = input("Enter student's enrollment date:")
-                    new_birth_day = input("Enter student's birth day:")
+                    new_first_name, new_last_name, new_email, new_enrollment_date, new_birth_day = student_input()
                     new_student = Student(new_first_name, new_last_name, new_email, new_enrollment_date, new_birth_day)
-                    fa
+                    faculty_abbreviation = input("Enter the faculty of the student(abbreviation):")
+                    for faculty in faculties:
+                        if faculty.abbreviation == faculty_abbreviation:
+                            faculty.add_student(new_student)
+                            break
                 elif choice_fm == "2":
-                    pass
+                    first_name_to_graduate, last_name_to_graduate, email_to_graduate = input(f"Enter the student's "
+                                                                                             "information("
+                                                                                             "<first_name>_<last_name"
+                                                                                             ">_<email>_<corporation "
+                                                                                             "email>):")
+                    for faculty in faculties:
+                        for student in faculty.students_list:
+                            if student.first_name == first_name_to_graduate and student.last_name == last_name_to_graduate and student.email == email_to_graduate:
+                                faculty.graduate_student(student)
+                                break
                 elif choice_fm == "3":
-                    pass
+                    for faculty in faculties:
+                        print(f"Faculty: {faculty.faculty_name}")
+                        faculty.display_students()
                 elif choice_fm == "4":
-                    pass
+                    for faculty in faculties:
+                        print(f"Faculty: {faculty.faculty_name}")
+                        faculty.display_graduates()
                 elif choice_fm == "0":
                     break
-        elif choice == "3":
-            student_menu()
         elif choice == "0":
             break
         else:

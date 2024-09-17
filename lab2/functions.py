@@ -14,3 +14,12 @@ def search_faculties_by_field(field_to_search, faculties):
     for faculty in faculties:
         if faculty.study_field == field_to_search:
             print(f"Faculty Name: {faculty.faculty_name}, Abbreviation: {faculty.abbreviation}")
+
+
+def student_input():
+    first_name = input("Enter student's first name: ")
+    last_name = input("Enter student's last name: ")
+    email = input("Enter student's email address: ")
+    date_of_birth = input("Enter student's date of birth (YYYY-MM-DD): ")
+    enrolment_date = input("Enter student's enrolment date (YYYY-MM-DD): ")
+    return first_name, last_name, email, date_of_birth, enrolment_date
