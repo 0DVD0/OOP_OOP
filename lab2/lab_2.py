@@ -1,7 +1,7 @@
 from enum import Enum
 from Menu import main_menu, faculty_menu, general_menu
 from functions import search_student_by_id, search_faculties_by_field, student_input, faculty_input, print_faculty, \
-    assing_student_id, add_student_to_faculty, find_student_to_graduate
+    assign_student_id, add_student_to_faculty, find_student_to_graduate
 
 
 def print_study_fields():
@@ -104,7 +104,7 @@ def main():
                 choice_fm = input("Enter choice:")
                 if choice_fm == "1":
                     new_first_name, new_last_name, new_email, new_enrollment_date, new_birth_day = student_input()
-                    new_student_id = assing_student_id(faculties)
+                    new_student_id = assign_student_id(faculties)
                     new_student = Student(new_first_name, new_last_name, new_email, new_enrollment_date, new_birth_day,
                                           new_student_id)
                     faculty_abbreviation = input("Enter the faculty of the student(abbreviation):")

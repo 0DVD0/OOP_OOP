@@ -39,7 +39,7 @@ def print_faculty(faculty):
           f"students: {len(faculty.students_list)}, Study Field: {faculty.study_field}")
 
 
-def assing_student_id(faculties):
+def assign_student_id(faculties):
     new_student_id = int()
     for faculty in faculties:
         for student in faculty.students_list:
