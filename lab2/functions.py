@@ -1,7 +1,7 @@
-def search_student_by_email(email_to_search, faculties):
+def search_student_by_id(id_to_search, faculties):
     for faculty in faculties:
         for student in faculty.students_list:
-            if student.email == email_to_search:
+            if student.student_id == id_to_search:
                 print(
                     f"First Name: {student.first_name}, Last Name: {student.last_name}, Email: {student.email}, "
                     f"Date of birth: {student.date_of_birth}, Enrolment Date: {student.enrolment_date}, "

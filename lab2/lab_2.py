@@ -1,6 +1,7 @@
 from enum import Enum
 from Menu import main_menu, faculty_menu, student_menu, general_menu
-from functions import search_student_by_email, search_faculties_by_field, student_input
+from functions import search_student_by_id, search_faculties_by_field, student_input
+import random
 
 
 class Study_field(Enum):
@@ -27,13 +28,15 @@ class Student(Faculty):
     enrolment_date = int()
     graduate = bool()
     date_of_birth = int()
+    student_id = int()
 
-    def __init__(self, first_name, last_name, email, enrolment_date, date_of_birth):
+    def __init__(self, first_name, last_name, email, enrolment_date, date_of_birth, student_id):
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
         self.enrolment_date = enrolment_date
         self.date_of_birth = date_of_birth
+        self.student_id = student_id
         self.graduate = False
 
 
@@ -86,11 +89,8 @@ def main():
                     faculties.append(Faculty(faculty_name, faculty_abbreviation, Study_field(int(study_field))))
                     pass
                 elif choice_gm == "2":
-                    student_to_search = input("Enter students email "
-                                              "address:<first_name>.<last_name>@<faculty_abbreviation"
-                                              ">.<university_abbreviation>.<contry of"
-                                              "university")
-                    search_student_by_email(student_to_search, faculties)
+                    student_to_search = input("Enter students identification number:")
+                    search_student_by_id(student_to_search, faculties)
                 elif choice_gm == "3":
                     for faculty in faculties:
                         print(f"Faculty Name: {faculty.faculty_name}(Abbreviation: {faculty.abbreviation}), Number of "
@@ -108,30 +108,33 @@ def main():
                 choice_fm = input("Enter choice:")
                 if choice_fm == "1":
                     new_first_name, new_last_name, new_email, new_enrollment_date, new_birth_day = student_input()
-                    new_student = Student(new_first_name, new_last_name, new_email, new_enrollment_date, new_birth_day)
+                    new_student_id = int()
+                    for faculty in faculties:
+                        for student in faculty.students_list:
+                            if student.student_id == new_student_id or new_student_id == 0:
+                                new_student_id = random.randint(100000, 999999)
+                                break
+                    new_student = Student(new_first_name, new_last_name, new_email, new_enrollment_date, new_birth_day,
+                                          new_student_id)
                     faculty_abbreviation = input("Enter the faculty of the student(abbreviation):")
                     for faculty in faculties:
                         if faculty.abbreviation == faculty_abbreviation:
                             faculty.add_student(new_student)
                             break
                 elif choice_fm == "2":
-                    first_name_to_graduate, last_name_to_graduate, email_to_graduate = input(f"Enter the student's "
-                                                                                             "information("
-                                                                                             "<first_name>_<last_name"
-                                                                                             ">_<email>_<corporation "
-                                                                                             "email>):")
+                    student_id_to_graduate = input(f"Enter the student's identification number:")
                     for faculty in faculties:
                         for student in faculty.students_list:
-                            if student.first_name == first_name_to_graduate and student.last_name == last_name_to_graduate and student.email == email_to_graduate:
+                            if student_id_to_graduate == student.student_id:
                                 faculty.graduate_student(student)
                                 break
                 elif choice_fm == "3":
                     for faculty in faculties:
-                        print(f"Faculty: {faculty.faculty_name}")
+                        print(f"Faculty: {faculty.faculty_name.upper()}")
                         faculty.display_students()
                 elif choice_fm == "4":
                     for faculty in faculties:
-                        print(f"Faculty: {faculty.faculty_name}")
+                        print(f"Faculty: {faculty.faculty_name.upper()}")
                         faculty.display_graduates()
                 elif choice_fm == "0":
                     break
