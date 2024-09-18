@@ -1,3 +1,6 @@
+import random
+
+
 def search_student_by_id(id_to_search, faculties):
     for faculty in faculties:
         for student in faculty.students_list:
@@ -23,3 +26,39 @@ def student_input():
     date_of_birth = input("Enter student's date of birth (YYYY-MM-DD): ")
     enrolment_date = input("Enter student's enrolment date (YYYY-MM-DD): ")
     return first_name, last_name, email, date_of_birth, enrolment_date
+
+
+def faculty_input():
+    faculty_name = input("Enter faculty's name: ")
+    abbreviation = input("Enter faculty's abbreviation: ")
+    return faculty_name, abbreviation
+
+
+def print_faculty(faculty):
+    print(f"Faculty Name: {faculty.faculty_name}(Abbreviation: {faculty.abbreviation}), Number of "
+          f"students: {len(faculty.students_list)}, Study Field: {faculty.study_field}")
+
+
+def assing_student_id(faculties):
+    new_student_id = int()
+    for faculty in faculties:
+        for student in faculty.students_list:
+            if student.student_id == new_student_id or new_student_id == 0:
+                new_student_id = random.randint(100000, 999999)
+                break
+    return new_student_id
+
+
+def add_student_to_faculty(faculties, new_student, faculty_abbreviation):
+    for faculty in faculties:
+        if faculty.abbreviation == faculty_abbreviation:
+            faculty.add_student(new_student)
+            break
+
+
+def find_student_to_graduate(faculties, student_id_to_graduate):
+    for faculty in faculties:
+        for student in faculty.students_list:
+            if student_id_to_graduate == student.student_id:
+                faculty.graduate_student(student)
+                break

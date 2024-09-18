@@ -1,7 +1,12 @@
 from enum import Enum
-from Menu import main_menu, faculty_menu, student_menu, general_menu
-from functions import search_student_by_id, search_faculties_by_field, student_input
-import random
+from Menu import main_menu, faculty_menu, general_menu
+from functions import search_student_by_id, search_faculties_by_field, student_input, faculty_input, print_faculty, \
+    assing_student_id, add_student_to_faculty, find_student_to_graduate
+
+
+def print_study_fields():
+    for field in Study_field:
+        print(f"{field.value}.{field.name} ")
 
 
 class Study_field(Enum):
@@ -10,11 +15,6 @@ class Study_field(Enum):
     FOOD_TECHNOLOGY = 3
     URBANISM_ARCHITECTURE = 4
     VETERINARY_MEDICINE = 5
-
-
-def print_study_fields():
-    for field in Study_field:
-        print(f"{field.value}.{field.name} ")
 
 
 class Faculty:
@@ -39,11 +39,15 @@ class Student(Faculty):
         self.student_id = student_id
         self.graduate = False
 
+    def print_info(self):
+        print(f"\n\nFirst Name: {self.first_name},\n Last Name: {self.last_name},\n Email: {self.email},\n Date of"
+              f"birth: {self.date_of_birth},\n Enrolment Date: {self.enrolment_date}\n")
+
 
 class Faculty:
     faculty_name = str()
     abbreviation = str()
-    students_list = [Student]
+    students_list = []
     study_field = Study_field
 
     def __init__(self, faculty_name, abbreviation, study_field):
@@ -58,18 +62,14 @@ class Faculty:
         self.students_list[student].graduate = True
 
     def display_students(self):
-        for student_index in self.students_list:
+        for student_index in range(len(self.students_list)):
             if not self.students_list[student_index].graduate:
-                print(
-                    f"First Name: {student_index.first_name}, Last Name: {student_index.last_name}, Email: {student_index.email}, Date of "
-                    f"birth: {student_index.date_of_birth}, Enrolment Date: {student_index.enrolment_date}")
+                self.students_list[student_index].print_info()
 
     def display_graduates(self):
-        for student in self.students_list:
-            if self.students_list[student].graduate:
-                print(
-                    f"First Name: {student.first_name}, Last Name: {student.last_name}, Email: {student.email}, Date of "
-                    f"birth: {student.date_of_birth}, Enrolment Date: {student.enrolment_date}")
+        for student_index in range(len(self.students_list)):
+            if self.students_list[student_index].graduate:
+                self.students_list[student_index].print_info()
 
 
 def main():
@@ -82,8 +82,7 @@ def main():
                 general_menu()
                 choice_gm = input("Enter your choice: ")
                 if choice_gm == "1":
-                    faculty_name = input("Enter faculty name: ")
-                    faculty_abbreviation = input("Enter faculty abbreviation: ")
+                    faculty_name, faculty_abbreviation = faculty_input()
                     print_study_fields()
                     study_field = input("Enter study field (1-5): ")
                     faculties.append(Faculty(faculty_name, faculty_abbreviation, Study_field(int(study_field))))
@@ -93,41 +92,26 @@ def main():
                     search_student_by_id(student_to_search, faculties)
                 elif choice_gm == "3":
                     for faculty in faculties:
-                        print(f"Faculty Name: {faculty.faculty_name}(Abbreviation: {faculty.abbreviation}), Number of "
-                              f"students: {len(faculty.students_list)}, Study Field: {len(faculty.study_field)}")
-
+                        print_faculty(faculty)
                 elif choice_gm == "4":
                     field_to_search = input("Give the field of study: ")
                     search_faculties_by_field(field_to_search, faculties)
                 elif choice_gm == "0":
                     break
-
         elif choice == "2":
             while True:
                 faculty_menu()
                 choice_fm = input("Enter choice:")
                 if choice_fm == "1":
                     new_first_name, new_last_name, new_email, new_enrollment_date, new_birth_day = student_input()
-                    new_student_id = int()
-                    for faculty in faculties:
-                        for student in faculty.students_list:
-                            if student.student_id == new_student_id or new_student_id == 0:
-                                new_student_id = random.randint(100000, 999999)
-                                break
+                    new_student_id = assing_student_id(faculties)
                     new_student = Student(new_first_name, new_last_name, new_email, new_enrollment_date, new_birth_day,
                                           new_student_id)
                     faculty_abbreviation = input("Enter the faculty of the student(abbreviation):")
-                    for faculty in faculties:
-                        if faculty.abbreviation == faculty_abbreviation:
-                            faculty.add_student(new_student)
-                            break
+                    add_student_to_faculty(faculties, new_student, faculty_abbreviation)
                 elif choice_fm == "2":
                     student_id_to_graduate = input(f"Enter the student's identification number:")
-                    for faculty in faculties:
-                        for student in faculty.students_list:
-                            if student_id_to_graduate == student.student_id:
-                                faculty.graduate_student(student)
-                                break
+                    find_student_to_graduate(faculties, student_id_to_graduate)
                 elif choice_fm == "3":
                     for faculty in faculties:
                         print(f"Faculty: {faculty.faculty_name.upper()}")
