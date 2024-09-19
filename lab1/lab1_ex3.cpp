@@ -63,7 +63,7 @@ int main(){
                 cout << "Exiting..." << endl;
                 break;
                 default:
-                    printf("Nahui");
+                    printf("Nahuia te viibesti?\n");
         }
     }while (choice != 0);
 }
