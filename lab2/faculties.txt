@@ -1,0 +1,11 @@
+Faculty of Engineering,ENG,MECHANICAL_ENGINEERING
+John,Doe,john.doe@example.com,2023,2000,123456,False
+Jane,Smith,jane.smith@example.com,2022,1999,789012,True
+END_FACULTY
+Faculty of IT,IT,SOFTWARE_ENGINEERING
+Alice,Williams,alice.williams@example.com,2021,2001,345678,False
+Bob,Johnson,bob.johnson@example.com,2020,1998,901234,False
+END_FACULTY
+Faculty of Architecture,ARC,URBANISM_ARCHITECTURE
+Charlie,Brown,charlie.brown@example.com,2023,2002,567890,True
+END_FACULTY
