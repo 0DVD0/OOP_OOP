@@ -15,7 +15,7 @@ def search_student_by_id(id_to_search, faculties):
 
 def search_faculties_by_field(field_to_search, faculties):
     for faculty in faculties:
-        if faculty.study_field == field_to_search:
+        if faculty.study_field.value == field_to_search:
             print(f"Faculty Name: {faculty.faculty_name}, Abbreviation: {faculty.abbreviation}")
 
 
@@ -62,3 +62,13 @@ def find_student_to_graduate(faculties, student_id_to_graduate):
             if student_id_to_graduate == student.student_id:
                 faculty.graduate_student(student)
                 break
+
+
+def save_state(faculties, filename="faculties.txt"):
+    with open(filename, "w") as file:
+        for faculty in faculties:
+            file.write(f"{faculty.faculty_name},{faculty.abbreviation},{faculty.study_field.name}\n")
+            for student in faculty.students_list:
+                file.write(f"{student.first_name},{student.last_name},{student.email},{student.enrolment_date},"
+                           f"{student.date_of_birth},{student.student_id},{student.graduate}\n")
+            file.write("END_FACULTY\n")

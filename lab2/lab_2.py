@@ -1,7 +1,33 @@
+import os
 from enum import Enum
 from Menu import main_menu, faculty_menu, general_menu
 from functions import search_student_by_id, search_faculties_by_field, student_input, faculty_input, print_faculty, \
-    assign_student_id, add_student_to_faculty, find_student_to_graduate
+    assign_student_id, add_student_to_faculty, find_student_to_graduate, save_state
+
+
+def load_state(filename="faculties.txt"):
+    loaded_faculties = []
+    if os.path.exists(filename):
+        with open(filename, "r") as file:
+            faculty = None
+            for line in file:
+                line = line.strip()
+                if line == "END_FACULTY":
+                    loaded_faculties.append(faculty)
+                    continue
+
+                if faculty is None or line.startswith("END_FACULTY"):
+                    faculty_name, abbreviation, study_field_name = line.split(",")
+                    study_field = Study_field[study_field_name]
+                    faculty = Faculty(faculty_name, abbreviation, study_field)
+                else:
+                    first_name, last_name, email, enrolment_date, date_of_birth, student_id, graduate = line.split(",")
+                    student = Student(first_name, last_name, email, int(enrolment_date), int(date_of_birth),
+                                      int(student_id))
+                    student.graduate = (graduate == "True")
+                    faculty.add_student(student)
+
+    return loaded_faculties
 
 
 def print_study_fields():
@@ -73,7 +99,7 @@ class Faculty:
 
 
 def main():
-    faculties = [Faculty]
+    faculties = load_state('faculties')
     while True:
         main_menu()
         choice = input("Enter your choice: ")
@@ -94,7 +120,8 @@ def main():
                     for faculty in faculties:
                         print_faculty(faculty)
                 elif choice_gm == "4":
-                    field_to_search = input("Give the field of study: ")
+                    print_study_fields()
+                    field_to_search = input("Give the field of study(1-5): ")
                     search_faculties_by_field(field_to_search, faculties)
                 elif choice_gm == "0":
                     break
@@ -123,6 +150,8 @@ def main():
                 elif choice_fm == "0":
                     break
         elif choice == "0":
+            save_state(faculties)
+            print("Exiting...")
             break
         else:
             print("Invalid choice. Please try again.")
