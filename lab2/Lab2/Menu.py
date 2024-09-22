@@ -1,4 +1,4 @@
-from modules import Faculty, Student, Study_field
+from lab2.Lab2.modules import Faculty, Student, Study_field
 from functions import search_student_by_id, search_faculties_by_field, student_input, \
     assign_student_id, add_student_to_faculty, find_student_to_graduate, faculty_input
 

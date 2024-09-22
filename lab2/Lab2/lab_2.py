@@ -1,4 +1,4 @@
-from Menu import print_main_menu, general_menu, faculty_menu
+from lab2.Lab2.Menu import print_main_menu, general_menu, faculty_menu
 from functions import load_state, save_state
 
 

@@ -1,6 +1,6 @@
 import random
 import os
-from modules import Study_field, Student, Faculty
+from lab2.Lab2.modules import Study_field, Student, Faculty
 
 
 def search_student_by_id(id_to_search, faculties):
