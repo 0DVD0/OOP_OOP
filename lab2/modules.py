@@ -56,7 +56,7 @@ class Faculty:
         self.students_list.append(student)
 
     def graduate_student(self, student):
-        self.students_list[student].graduate = True
+        student.graduate = True
 
     def display_students(self):
         for student_index in range(len(self.students_list)):

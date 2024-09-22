@@ -7,7 +7,7 @@ def search_student_by_id(id_to_search, faculties):
     found = False
     for faculty in faculties:
         for student in faculty.students_list:
-            if student.student_id == id_to_search:
+            if student.student_id == int(id_to_search):
                 print(
                     f"First Name: {student.first_name}, Last Name: {student.last_name}, Email: {student.email}, "
                     f"Date of birth: {student.date_of_birth}, Enrolment Date: {student.enrolment_date}, "
@@ -20,8 +20,8 @@ def search_student_by_id(id_to_search, faculties):
 
 def search_faculties_by_field(field_to_search, faculties):
     for faculty in faculties:
-        if faculty.study_field.value == field_to_search:
-            print(f"Faculty Name: {faculty.faculty_name}, Abbreviation: {faculty.abbreviation}")
+        if faculty.study_field.value == int(field_to_search):
+            faculty.print_faculty()
 
 
 def student_input():
@@ -58,13 +58,13 @@ def add_student_to_faculty(faculties, new_student, faculty_abbreviation):
 
 def find_student_to_graduate(faculties, student_id_to_graduate):
     for faculty in faculties:
-        for student in faculty.students_list:
-            if student_id_to_graduate == student.student_id:
-                if student.graduate:
+        for student_index in faculty.students_list:
+            if int(student_id_to_graduate) == faculty.students_list[student_index].student_id:
+                if faculty.students_list[student_index].graduate:
                     print("Student has already graduated")
                 else:
                     print("Student has graduated!!!")
-                    faculty.graduate_student(student)
+                    faculty.graduate_student(faculty.students_list[student_index])
                 break
 
 

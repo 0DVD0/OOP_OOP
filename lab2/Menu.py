@@ -33,7 +33,7 @@ def general_menu(faculties):
         elif choice_gm == "4":
             print_study_fields()
             field_to_search = input("Give the field of study(1-5): ")
-            search_faculties_by_field(field_to_search, faculties)
+            search_faculties_by_field(int(field_to_search), faculties)
         elif choice_gm == "0":
             break
 
@@ -63,10 +63,6 @@ def faculty_menu(faculties):
                 faculty.display_graduates()
         elif choice_fm == "0":
             break
-
-
-def main_menu():
-    pass
 
 
 def print_general_menu():
