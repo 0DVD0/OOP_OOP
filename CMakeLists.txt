@@ -9,4 +9,9 @@ add_executable(OOP
         lab1/lab1_ex2.cpp
         lab1/lab1_ex3.cpp
         lab1/lab1_ex4.cpp
-        lab2/lab2_ex1.cpp)
+        lab2/lab2_ex1.cpp
+        lab2/lab2_ex2.cpp
+        test.cpp
+        lab2/lab2_ex3&4.cpp
+        lab2/lab2_ex5a.cpp
+        lab2/lab2_ex5b.cpp)

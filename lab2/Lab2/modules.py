@@ -36,6 +36,10 @@ class Student(Faculty):
               f"birth: {self.date_of_birth},\n Enrolment Date: {self.enrolment_date},\n Student ID: {self.student_id}\n")
 
 
+def graduate_student(student):
+    student.graduate = True
+
+
 class Faculty:
     faculty_name = str()
     abbreviation = str()
@@ -54,9 +58,6 @@ class Faculty:
 
     def add_student(self, student):
         self.students_list.append(student)
-
-    def graduate_student(self, student):
-        student.graduate = True
 
     def display_students(self):
         for student_index in range(len(self.students_list)):
