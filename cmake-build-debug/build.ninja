@@ -79,41 +79,41 @@ build CMakeFiles/OOP.dir/lab1/lab1_ex4.cpp.obj: CXX_COMPILER__OOP_unscanned_Debu
   OBJECT_DIR = CMakeFiles\OOP.dir
   OBJECT_FILE_DIR = CMakeFiles\OOP.dir\lab1
 
-build CMakeFiles/OOP.dir/lab2/lab2_ex1.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/Asus/Desktop/OOP/lab2/lab2_ex1.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\lab2\lab2_ex1.cpp.obj.d
-  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\lab2
-
-build CMakeFiles/OOP.dir/lab2/lab2_ex2.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/Asus/Desktop/OOP/lab2/lab2_ex2.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\lab2\lab2_ex2.cpp.obj.d
-  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\lab2
-
 build CMakeFiles/OOP.dir/test.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/Asus/Desktop/OOP/test.cpp || cmake_object_order_depends_target_OOP
   DEP_FILE = CMakeFiles\OOP.dir\test.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
   OBJECT_FILE_DIR = CMakeFiles\OOP.dir
 
-build CMakeFiles/OOP.dir/lab2/lab2_ex3&4.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/Asus/Desktop/OOP/lab2/lab2_ex3&4.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = "CMakeFiles\OOP.dir\lab2\lab2_ex3&4.cpp.obj.d"
+build CMakeFiles/OOP.dir/lab2/Lab2_exercises/lab2_ex1.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/Asus/Desktop/OOP/lab2/Lab2_exercises/lab2_ex1.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\lab2\Lab2_exercises\lab2_ex1.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\lab2
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\lab2\Lab2_exercises
 
-build CMakeFiles/OOP.dir/lab2/lab2_ex5a.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/Asus/Desktop/OOP/lab2/lab2_ex5a.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\lab2\lab2_ex5a.cpp.obj.d
+build CMakeFiles/OOP.dir/lab2/Lab2_exercises/lab2_ex2.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/Asus/Desktop/OOP/lab2/Lab2_exercises/lab2_ex2.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\lab2\Lab2_exercises\lab2_ex2.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\lab2
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\lab2\Lab2_exercises
 
-build CMakeFiles/OOP.dir/lab2/lab2_ex5b.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/Asus/Desktop/OOP/lab2/lab2_ex5b.cpp || cmake_object_order_depends_target_OOP
-  DEP_FILE = CMakeFiles\OOP.dir\lab2\lab2_ex5b.cpp.obj.d
+build CMakeFiles/OOP.dir/lab2/Lab2_exercises/lab2_ex3&4.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/Asus/Desktop/OOP/lab2/Lab2_exercises/lab2_ex3&4.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = "CMakeFiles\OOP.dir\lab2\Lab2_exercises\lab2_ex3&4.cpp.obj.d"
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\OOP.dir
-  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\lab2
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\lab2\Lab2_exercises
+
+build CMakeFiles/OOP.dir/lab2/Lab2_exercises/lab2_ex5a.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/Asus/Desktop/OOP/lab2/Lab2_exercises/lab2_ex5a.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\lab2\Lab2_exercises\lab2_ex5a.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\OOP.dir
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\lab2\Lab2_exercises
+
+build CMakeFiles/OOP.dir/lab2/Lab2_exercises/lab2_ex5b.cpp.obj: CXX_COMPILER__OOP_unscanned_Debug C$:/Users/Asus/Desktop/OOP/lab2/Lab2_exercises/lab2_ex5b.cpp || cmake_object_order_depends_target_OOP
+  DEP_FILE = CMakeFiles\OOP.dir\lab2\Lab2_exercises\lab2_ex5b.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\OOP.dir
+  OBJECT_FILE_DIR = CMakeFiles\OOP.dir\lab2\Lab2_exercises
 
 
 # =============================================================================
@@ -123,7 +123,7 @@ build CMakeFiles/OOP.dir/lab2/lab2_ex5b.cpp.obj: CXX_COMPILER__OOP_unscanned_Deb
 #############################################
 # Link the executable OOP.exe
 
-build OOP.exe: CXX_EXECUTABLE_LINKER__OOP_Debug CMakeFiles/OOP.dir/lab1/lab1.cpp.obj CMakeFiles/OOP.dir/lab1/lab1_ex1.cpp.obj CMakeFiles/OOP.dir/lab1/lab1_ex2.cpp.obj CMakeFiles/OOP.dir/lab1/lab1_ex3.cpp.obj CMakeFiles/OOP.dir/lab1/lab1_ex4.cpp.obj CMakeFiles/OOP.dir/lab2/lab2_ex1.cpp.obj CMakeFiles/OOP.dir/lab2/lab2_ex2.cpp.obj CMakeFiles/OOP.dir/test.cpp.obj CMakeFiles/OOP.dir/lab2/lab2_ex3&4.cpp.obj CMakeFiles/OOP.dir/lab2/lab2_ex5a.cpp.obj CMakeFiles/OOP.dir/lab2/lab2_ex5b.cpp.obj
+build OOP.exe: CXX_EXECUTABLE_LINKER__OOP_Debug CMakeFiles/OOP.dir/lab1/lab1.cpp.obj CMakeFiles/OOP.dir/lab1/lab1_ex1.cpp.obj CMakeFiles/OOP.dir/lab1/lab1_ex2.cpp.obj CMakeFiles/OOP.dir/lab1/lab1_ex3.cpp.obj CMakeFiles/OOP.dir/lab1/lab1_ex4.cpp.obj CMakeFiles/OOP.dir/test.cpp.obj CMakeFiles/OOP.dir/lab2/Lab2_exercises/lab2_ex1.cpp.obj CMakeFiles/OOP.dir/lab2/Lab2_exercises/lab2_ex2.cpp.obj CMakeFiles/OOP.dir/lab2/Lab2_exercises/lab2_ex3&4.cpp.obj CMakeFiles/OOP.dir/lab2/Lab2_exercises/lab2_ex5a.cpp.obj CMakeFiles/OOP.dir/lab2/Lab2_exercises/lab2_ex5b.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\OOP.dir
