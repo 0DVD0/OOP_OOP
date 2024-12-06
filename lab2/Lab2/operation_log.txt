@@ -65,3 +65,130 @@
 2024-09-30 02:55:18,134 - INFO - Saving state to faculties.txt
 2024-09-30 02:55:18,136 - INFO - State saved successfully.
 2024-09-30 02:55:18,136 - INFO - Application exited, state saved
+2024-10-03 13:46:58,991 - INFO - Application started
+2024-10-03 13:46:58,992 - INFO - Loading state from faculties.txt
+2024-10-03 13:46:59,004 - INFO - Loaded faculty: Faculty of Engineering
+2024-10-03 13:46:59,004 - INFO - Loaded student: John Doe
+2024-10-03 13:46:59,004 - INFO - Loaded student: Jane Smith
+2024-10-03 13:46:59,004 - INFO - Loaded faculty: Faculty of IT
+2024-10-03 13:46:59,004 - INFO - Loaded student: Alice Williams
+2024-10-03 13:46:59,005 - INFO - Loaded student: Bob Johnson
+2024-10-03 13:46:59,005 - INFO - Loaded faculty: Faculty of Architecture
+2024-10-03 13:46:59,005 - INFO - Loaded student: Charlie Brown
+2024-10-03 13:48:12,011 - INFO - User chose option 2
+2024-10-03 13:48:18,339 - INFO - User chose option 1
+2024-10-03 13:53:20,715 - INFO - User chose option 1
+2024-10-03 13:53:29,830 - INFO - Application started
+2024-10-03 13:53:29,831 - INFO - Loading state from faculties.txt
+2024-10-03 13:53:29,832 - INFO - Loaded faculty: Faculty of Engineering
+2024-10-03 13:53:29,832 - INFO - Loaded student: John Doe
+2024-10-03 13:53:29,832 - INFO - Loaded student: Jane Smith
+2024-10-03 13:53:29,832 - INFO - Loaded faculty: Faculty of IT
+2024-10-03 13:53:29,833 - INFO - Loaded student: Alice Williams
+2024-10-03 13:53:29,833 - INFO - Loaded student: Bob Johnson
+2024-10-03 13:53:29,833 - INFO - Loaded faculty: Faculty of Architecture
+2024-10-03 13:53:29,833 - INFO - Loaded student: Charlie Brown
+2024-10-03 13:53:33,910 - INFO - User chose option 1
+2024-10-03 13:54:08,469 - INFO - Found faculty with study field: 3
+2024-10-03 13:54:08,470 - WARNING - Faculty with study field: 3 not found
+2024-10-03 13:54:18,549 - INFO - User chose option 2
+2024-10-03 13:55:16,893 - INFO - Searching for faculty: pus
+2024-10-03 13:55:16,894 - INFO - Adding student to faculty: pus
+2024-10-03 13:57:30,260 - INFO - Application started
+2024-10-03 13:57:30,260 - INFO - Loading state from faculties.txt
+2024-10-03 13:57:30,260 - INFO - Loaded faculty: Faculty of Engineering
+2024-10-03 13:57:30,260 - INFO - Loaded student: John Doe
+2024-10-03 13:57:30,260 - INFO - Loaded student: Jane Smith
+2024-10-03 13:57:30,261 - INFO - Loaded faculty: Faculty of IT
+2024-10-03 13:57:30,261 - INFO - Loaded student: Alice Williams
+2024-10-03 13:57:30,261 - INFO - Loaded student: Bob Johnson
+2024-10-03 13:57:30,261 - INFO - Loaded faculty: Faculty of Architecture
+2024-10-03 13:57:30,261 - INFO - Loaded student: Charlie Brown
+2024-10-03 13:57:32,910 - INFO - User chose option 1
+2024-10-03 13:57:36,506 - INFO - User chose option 2
+2024-10-03 13:57:51,284 - INFO - Application started
+2024-10-03 13:57:51,284 - INFO - Loading state from faculties.txt
+2024-10-03 13:57:51,284 - INFO - Loaded faculty: Faculty of Engineering
+2024-10-03 13:57:51,284 - INFO - Loaded student: John Doe
+2024-10-03 13:57:51,285 - INFO - Loaded student: Jane Smith
+2024-10-03 13:57:51,285 - INFO - Loaded faculty: Faculty of IT
+2024-10-03 13:57:51,285 - INFO - Loaded student: Alice Williams
+2024-10-03 13:57:51,285 - INFO - Loaded student: Bob Johnson
+2024-10-03 13:57:51,285 - INFO - Loaded faculty: Faculty of Architecture
+2024-10-03 13:57:51,285 - INFO - Loaded student: Charlie Brown
+2024-10-03 13:57:52,942 - INFO - User chose option 2
+2024-10-03 13:58:34,063 - INFO - Application started
+2024-10-03 13:58:34,063 - INFO - Loading state from faculties.txt
+2024-10-03 13:58:34,064 - INFO - Loaded faculty: Faculty of Engineering
+2024-10-03 13:58:34,064 - INFO - Loaded student: John Doe
+2024-10-03 13:58:34,064 - INFO - Loaded student: Jane Smith
+2024-10-03 13:58:34,064 - INFO - Loaded faculty: Faculty of IT
+2024-10-03 13:58:34,064 - INFO - Loaded student: Alice Williams
+2024-10-03 13:58:34,064 - INFO - Loaded student: Bob Johnson
+2024-10-03 13:58:34,064 - INFO - Loaded faculty: Faculty of Architecture
+2024-10-03 13:58:34,064 - INFO - Loaded student: Charlie Brown
+2024-10-03 13:58:37,404 - INFO - User chose option 2
+2024-10-03 14:02:10,343 - INFO - Application started
+2024-10-03 14:02:10,344 - INFO - Loading state from faculties.txt
+2024-10-03 14:02:10,344 - INFO - Loaded faculty: Faculty of Engineering
+2024-10-03 14:02:10,344 - INFO - Loaded student: John Doe
+2024-10-03 14:02:10,345 - INFO - Loaded student: Jane Smith
+2024-10-03 14:02:10,345 - INFO - Loaded faculty: Faculty of IT
+2024-10-03 14:02:10,345 - INFO - Loaded student: Alice Williams
+2024-10-03 14:02:10,345 - INFO - Loaded student: Bob Johnson
+2024-10-03 14:02:10,345 - INFO - Loaded faculty: Faculty of Architecture
+2024-10-03 14:02:10,345 - INFO - Loaded student: Charlie Brown
+2024-10-03 14:02:16,032 - INFO - User chose option 2
+2024-10-03 14:04:09,240 - INFO - Application started
+2024-10-03 14:04:09,240 - INFO - Loading state from faculties.txt
+2024-10-03 14:04:09,241 - INFO - Loaded faculty: Faculty of Engineering
+2024-10-03 14:04:09,241 - INFO - Loaded student: John Doe
+2024-10-03 14:04:09,241 - INFO - Loaded student: Jane Smith
+2024-10-03 14:04:09,241 - INFO - Loaded faculty: Faculty of IT
+2024-10-03 14:04:09,241 - INFO - Loaded student: Alice Williams
+2024-10-03 14:04:09,241 - INFO - Loaded student: Bob Johnson
+2024-10-03 14:04:09,241 - INFO - Loaded faculty: Faculty of Architecture
+2024-10-03 14:04:09,241 - INFO - Loaded student: Charlie Brown
+2024-10-03 14:04:10,611 - INFO - User chose option 2
+2024-10-03 14:04:16,236 - WARNING - Student with ID 091234 not found
+2024-10-03 14:04:16,237 - ERROR - Error finding student to graduate: Student not found with ID: 091234
+2024-10-03 14:16:18,997 - INFO - Application started
+2024-10-03 14:16:18,997 - INFO - Loading state from faculties.txt
+2024-10-03 14:16:18,997 - INFO - Loaded faculty: Faculty of Engineering
+2024-10-03 14:16:18,997 - INFO - Loaded student: John Doe
+2024-10-03 14:16:18,998 - INFO - Loaded student: Jane Smith
+2024-10-03 14:16:18,998 - INFO - Loaded faculty: Faculty of IT
+2024-10-03 14:16:18,998 - INFO - Loaded student: Alice Williams
+2024-10-03 14:16:18,998 - INFO - Loaded student: Bob Johnson
+2024-10-03 14:16:18,998 - INFO - Loaded faculty: Faculty of Architecture
+2024-10-03 14:16:18,998 - INFO - Loaded student: Charlie Brown
+2024-10-03 14:16:21,870 - INFO - User chose option 2
+2024-10-03 14:19:33,005 - INFO - Application started
+2024-10-03 14:19:33,005 - INFO - Loading state from faculties.txt
+2024-10-03 14:19:33,005 - INFO - Loaded faculty: Faculty of Engineering
+2024-10-03 14:19:33,005 - INFO - Loaded student: John Doe
+2024-10-03 14:19:33,005 - INFO - Loaded student: Jane Smith
+2024-10-03 14:19:33,006 - INFO - Loaded faculty: Faculty of IT
+2024-10-03 14:19:33,006 - INFO - Loaded student: Alice Williams
+2024-10-03 14:19:33,006 - INFO - Loaded student: Bob Johnson
+2024-10-03 14:19:33,006 - INFO - Loaded faculty: Faculty of Architecture
+2024-10-03 14:19:33,006 - INFO - Loaded student: Charlie Brown
+2024-10-03 14:19:34,907 - INFO - User chose option 2
+2024-10-03 14:20:03,925 - INFO - User chose option 0
+2024-10-03 14:20:03,926 - INFO - Saving state to faculties.txt
+2024-10-03 14:20:03,927 - INFO - State saved successfully.
+2024-10-03 14:20:03,927 - INFO - Application exited, state saved
+2024-10-23 00:36:28,322 - INFO - Application started
+2024-10-23 00:36:28,324 - INFO - Loading state from faculties.txt
+2024-10-23 00:36:28,337 - INFO - Loaded faculty: Faculty of Engineering
+2024-10-23 00:36:28,337 - INFO - Loaded student: John Doe
+2024-10-23 00:36:28,337 - INFO - Loaded student: Jane Smith
+2024-10-23 00:36:28,337 - INFO - Loaded faculty: Faculty of IT
+2024-10-23 00:36:28,337 - INFO - Loaded student: Alice Williams
+2024-10-23 00:36:28,337 - INFO - Loaded student: Bob Johnson
+2024-10-23 00:36:28,338 - INFO - Loaded faculty: Faculty of Architecture
+2024-10-23 00:36:28,338 - INFO - Loaded student: Charlie Brown
+2024-10-23 00:38:51,487 - INFO - User chose option 0
+2024-10-23 00:38:51,487 - INFO - Saving state to faculties.txt
+2024-10-23 00:38:51,488 - INFO - State saved successfully.
+2024-10-23 00:38:51,489 - INFO - Application exited, state saved

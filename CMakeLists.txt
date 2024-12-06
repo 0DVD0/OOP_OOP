@@ -14,4 +14,5 @@ add_executable(OOP
         lab2/Lab2_exercises/lab2_ex2.cpp
         lab2/Lab2_exercises/lab2_ex3&4.cpp
         lab2/Lab2_exercises/lab2_ex5a.cpp
-        lab2/Lab2_exercises/lab2_ex5b.cpp)
+        lab2/Lab2_exercises/lab2_ex5b.cpp
+)

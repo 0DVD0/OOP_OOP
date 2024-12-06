@@ -5,9 +5,9 @@ from exeptions import StudentNotFoundException, InvalidFacultyOperation
 import logging
 
 logging.basicConfig(
-    filename='operation_log.txt',  # Log file name
-    level=logging.INFO,  # Log level (can be DEBUG, INFO, WARNING, ERROR, CRITICAL)
-    format='%(asctime)s - %(levelname)s - %(message)s'  # Log message format
+    filename='operation_log.txt',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
 
@@ -84,12 +84,12 @@ def find_student_to_graduate(faculties, student_id_to_graduate):
     try:
         for faculty in faculties:
             for student_index in faculty.students_list:
-                if int(student_id_to_graduate) == faculty.students_list[student_index].student_id:
-                    if faculty.students_list[student_index].graduate:
+                if int(student_id_to_graduate) == student_index.student_id:
+                    if student_index.graduate:
                         print("Student has already graduated")
                     else:
                         print("Student has graduated!!!")
-                        faculty.graduate_student(faculty.students_list[student_index])
+                        faculty.graduate_student(student_index)
                     return
 
         logging.warning(f"Student with ID {student_id_to_graduate} not found")

@@ -1,6 +1,6 @@
 from enum import Enum
 
-
+dsadd
 class Study_field(Enum):
     MECHANICAL_ENGINEERING = 1
     SOFTWARE_ENGINEERING = 2
